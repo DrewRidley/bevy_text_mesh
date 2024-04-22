@@ -142,5 +142,5 @@ fn apply_mesh(mesh_data: MeshData, mesh: &mut Mesh) {
     mesh.insert_attribute(Mesh::ATTRIBUTE_POSITION, mesh_data.vertices);
     mesh.insert_attribute(Mesh::ATTRIBUTE_NORMAL, mesh_data.normals);
     mesh.insert_attribute(Mesh::ATTRIBUTE_UV_0, mesh_data.uvs);
-    mesh.set_indices(Some(Indices::U32(mesh_data.indices)));
+    mesh.insert_indices(Indices::U32(mesh_data.indices));
 }
